@@ -55,7 +55,7 @@ body.dark {
 
 input::placeholder,
 textarea::placeholder {
-    color:#504e70;
+    color: #504e70;
     /* Dark color for light theme */
 }
 
@@ -465,6 +465,23 @@ h3.my-profession {
     max-width: 40%;
     text-align: center;
     position: relative;
+    animation: animate 2s linear infinite;
+}
+
+
+@keyframes animate {
+
+    0% {
+        transform: translate(-10px, 0px);
+    }
+
+    50% {
+        transform: translate(-0px, -10px);
+    }
+
+    100% {
+        transform: translate(-10px, 0px);
+    }
 }
 
 .home-img::after {
@@ -825,26 +842,27 @@ h3.my-profession {
 .portfolio .portfolio-item-inner {
     border: 2px solid var(--bg-black-100);
     text-align: center;
+    padding: 0%;
+    margin: 0;
     color: var(--text-black-900);
     border-radius: 10px;
     overflow: hidden;
-    height: 250px;
+    /* height: 250px; */
     transition: all 0.3s;
 }
 
 
 .portfolio .portfolio-item-inner .portfolio-img img:hover {
-    /* box-shadow: 0 0 20px rgba(48, 46, 77, 0.15); */
-    cursor: pointer;
     transform: scale(1.10);
-    overflow: hidden;
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
     border-radius: 10px;
-    height: 180px;
-    /* padding: 10px; */
+    height: 220px;
+    margin: 0;
+    /* padding: -40px; */
+
     display: block;
     transition: all 0.3s;
     overflow: hidden;
@@ -1512,4 +1530,13 @@ h3.my-profession {
     }
 
 
+}
+
+@media (max-width:490) {
+
+    .home .home-img {
+        
+    }
+
+    
 }
